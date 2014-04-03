@@ -1,12 +1,6 @@
 #!/bin/bash
 # OpenVPN automated installation script for Debian based systems (OpenVZ virtualization)
 
-# lets verify if the user has root or not
-if [ $USER != 'root' ]; then
-	echo "Sorry, you need to run this as root."
-	exit
-fi
-
 # lets verify if TUN/TAP is available. otherwise we cannot make the tunnel
 if [ ! -e /dev/net/tun ]; then
     echo "TUN/TAP is not available. Please enable it in your control panel."
